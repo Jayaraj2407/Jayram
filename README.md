@@ -1,6 +1,6 @@
 # about me
 
-iam jayaraj.A from achariya college of engineering and technology
+iam jayaraj.A from achariya college of engineering and technology 
 
 # objectve:
 
@@ -28,3 +28,4 @@ It helped in:
 - Created project folder
 - Learned basic concepts
 - Initialized the project
+
