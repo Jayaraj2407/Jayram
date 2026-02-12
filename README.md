@@ -1,22 +1,15 @@
-# about me
+## ABOUT ME
 
-iam jayaraj.A from achariya college of engineering and technology 
+I am A.Jayaraj from ACET cuurently pursuing Computer Science and Engineeering at 3rd year. 
 
-# objectve:
+## Objectve:
+    - The main objective of this project is to learn and implement practical concepts using programming and tools.
+    - This project helps in improving problem-solving skills and understanding real-world applications.
 
-    The main objective of this project is to learn and implement practical concepts using programming and tools.
-
-This project helps in improving problem-solving skills and understanding real-world applications.
-
-## 🧠 Stack Overflow
-
-Stack Overflow was used as a reference to understand errors and find solutions during development.  
-It helped in:
-
-- Debugging code errors
-- Learning new functions
-- Understanding best practices
-- Improving coding knowledge
+## Stack Overflow
+    We are learning the tech knowledge of **MERN** Stack as of
+    MongoDB
+    Express
 
 ---
 
@@ -28,4 +21,5 @@ It helped in:
 - Created project folder
 - Learned basic concepts
 - Initialized the project
+
 
