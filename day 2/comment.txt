@@ -1,0 +1,38 @@
+HTML Portfolio Website Project Assignment
+You must create a single HTML file named portfolio.html that serves as your personal portfolio website.
+You are allowed to use HTML tags only — no CSS and no JavaScript.
+Your portfolio must include all of the following elements and features:
+A proper HTML5 document structure with correct DOCTYPE and language attribute.
+A meaningful page <title>.
+Your full name displayed as the main heading of the page.
+At least one paragraph introducing yourself.
+Use of bold, italic, underlined, strikethrough, superscript, subscript, and inline code formatting somewhere in the text.
+An ordered list (<ol>) and an unordered list (<ul>) showing two different kinds of information (e.g. skills, hobbies, subjects, etc.).
+Internal navigation links that jump to different sections of the same page.
+At least one self-contained <article> block describing something about you (e.g. bio, goal, experience).
+At least one <details> + <summary> element that reveals extra information when clicked.
+At least two <figure> elements, each containing:
+An <img> with proper alt text OR
+A <video> with controls OR
+An <audio> with controls …and each figure must have a <figcaption>.
+A <progress> bar showing your skill level or completion percentage for at least three different skills.
+A <table> that displays your academic marks / grades containing at least:
+A caption
+Table header row (<th>)
+At least 4 rows of data
+Columns for subject, marks, and grade (or similar)
+A contact form that contains all of the following input types:
+Text input (for name)
+Email input
+Radio buttons (at least 2 options, e.g. gender)
+Checkboxes (at least 3 options, e.g. interests/hobbies)
+A <select> dropdown list with at least 3 options (e.g. country, preferred contact method, etc.)
+A submit button
+Each input/control must be correctly associated with a <label>
+A footer section containing a copyright notice with the current year.
+Additional rules:
+Every major section of the page should have a suitable heading level (<h1> to <h6>).
+Use semantic HTML tags wherever they make sense (header, nav, section, footer, etc.).
+The page must remain readable and logically structured even without any styling.
+All media (images, video, audio) must include proper fallback text for browsers that cannot display them.
+
