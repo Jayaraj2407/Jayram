@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Basic Assessment - Advanced Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      padding: 20px;
+    }
+    h2 {
+      color: #38bdf8;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 5px;
+    }
+    .card {
+      background: #020617;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    input, button {
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      cursor: pointer;
+      background: #38bdf8;
+      color: black;
+      font-weight: bold;
+    }
+    .output {
+      margin-top: 10px;
+      color: #a5f3fc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📘 JavaScript Assessment (Advanced Interactive)</h1>
+
+  <h2>Section 1 — Variables & Assignment</h2>
+  <div class="card">
+    <button onclick="variablesDemo()">Run Variables Demo</button>
+    <div id="vars" class="output"></div>
+  </div>
+
+  <h2>Swap Values (Without Third Variable)</h2>
+  <div class="card">
+    <input id="a" type="number" placeholder="Enter a">
+    <input id="b" type="number" placeholder="Enter b">
+    <button onclick="swapValues()">Swap</button>
+    <div id="swapResult" class="output"></div>
+  </div>
+
+  <h2>Operators</h2>
+  <div class="card">
+    <input id="num1" type="number" placeholder="Number 1">
+    <input id="num2" type="number" placeholder="Number 2">
+    <button onclick="operatorsDemo()">Calculate</button>
+    <div id="opsResult" class="output"></div>
+  </div>
+
+  <h2>Comparison (Greater / Equal / Less than 100)</h2>
+  <div class="card">
+    <input id="compareNum" type="number" placeholder="Enter a number">
+    <button onclick="compare100()">Check</button>
+    <div id="compareResult" class="output"></div>
+  </div>
+
+  <h2>Even / Odd + FizzBuzz</h2>
+  <div class="card">
+    <input id="fizzNum" type="number" placeholder="Enter a number">
+    <button onclick="fizzBuzz()">Check</button>
+    <div id="fizzResult" class="output"></div>
+  </div>
+
+  <h2>Weekday Switch (1–7)</h2>
+  <div class="card">
+    <input id="day" type="number" placeholder="1 to 7">
+    <button onclick="weekDay()">Find Day</button>
+    <div id="dayResult" class="output"></div>
+  </div>
+
+  <h2>Prime Checker</h2>
+  <div class="card">
+    <input id="primeNum" type="number" placeholder="Enter a number">
+    <button onclick="checkPrime()">Check Prime</button>
+    <div id="primeResult" class="output"></div>
+  </div>
+
+  <h2>Reverse String</h2>
+  <div class="card">
+    <input id="reverseText" type="text" placeholder="Enter text">
+    <button onclick="reverseString()">Reverse</button>
+    <div id="reverseResult" class="output"></div>
+  </div>
+
+  <script>
+    // 1–2 Variables
+    function variablesDemo() {
+      let name = "Alex";
+      let age = 21;
+      let isStudent = true;
+
+      document.getElementById("vars").innerHTML =
+        `Name: ${name}<br>Age: ${age}<br>Student: ${isStudent}`;
+    }
+
+    // 3 Swap values
+    function swapValues() {
+      let a = Number(document.getElementById("a").value);
+      let b = Number(document.getElementById("b").value);
+
+      [a, b] = [b, a];
+
+      document.getElementById("swapResult").innerText = `After Swap → a = ${a}, b = ${b}`;
+    }
+
+    // 4 What will be printed and why
+    let x = 10;
+    let y = x;
+    y = 20;
+    console.log("Output of Q4:", x); // 10 because y is a copy, not a reference
+
+    // 5 const rewrite
+    const pi = 3.14;
+    const radius = 5;
+    const area = pi * radius * radius;
+    console.log("Area:", area);
+
+    // 6 Operators
+    function operatorsDemo() {
+      let n1 = Number(num1.value);
+      let n2 = Number(num2.value);
+
+      let result = `
+        Sum: ${n1 + n2}<br>
+        Difference: ${n1 - n2}<br>
+        Product: ${n1 * n2}<br>
+        Quotient: ${n1 / n2}<br>
+        Remainder: ${n1 % n2}
+      `;
+      opsResult.innerHTML = result;
+    }
+
+    // 7 Predict output
+    console.log(5 + "5");   // "55"
+    console.log(5 - "2");   // 3
+    console.log(true + 1);  // 2
+
+    // 8 Comparison
+    function compare100() {
+      let n = Number(compareNum.value);
+      let result =
+        n > 100 ? "Greater than 100" :
+        n === 100 ? "Equal to 100" :
+        "Less than 100";
+      compareResult.innerText = result;
+    }
+
+    // 9 == vs ===
+    console.log(5 == "5");   // true (type conversion)
+    console.log(5 === "5");  // false (strict comparison)
+
+    // 10 Logical operators
+    function isEligible(age) {
+      return age >= 18 && age <= 60;
+    }
+
+    // 11–12 Even/Odd + FizzBuzz
+    function fizzBuzz() {
+      let n = Number(fizzNum.value);
+      let result = "";
+
+      if (n % 2 === 0) result += "Even ";
+      else result += "Odd ";
+
+      if (n % 3 === 0 && n % 5 === 0) result += "| FizzBuzz";
+      else if (n % 3 === 0) result += "| Fizz";
+      else if (n % 5 === 0) result += "| Buzz";
+
+      fizzResult.innerText = result;
+    }
+
+    // 13 Switch weekday
+    function weekDay() {
+      let d = Number(day.value);
+      let result;
+
+      switch (d) {
+        case 1: result = "Monday"; break;
+        case 2: result = "Tuesday"; break;
+        case 3: result = "Wednesday"; break;
+        case 4: result = "Thursday"; break;
+        case 5: result = "Friday"; break;
+        case 6: result = "Saturday"; break;
+        case 7: result = "Sunday"; break;
+        default: result = "Invalid day";
+      }
+      dayResult.innerText = result;
+    }
+
+    // 14 For loop
+    for (let i = 1; i <= 20; i++) {
+      if (i % 2 === 0) console.log("Even:", i);
+    }
+
+    // 15 While loop sum
+    function sumToN(n) {
+      let sum = 0, i = 1;
+      while (i <= n) {
+        sum += i;
+        i++;
+      }
+      return sum;
+    }
+
+    // 16 Break & Continue
+    for (let i = 1; i <= 10; i++) {
+      if (i === 5) continue;
+      if (i === 8) break;
+      console.log("Loop:", i);
+    }
+
+    // 17 Function sum
+    function add(a, b) {
+      return a + b;
+    }
+
+    // 18 Arrow function
+    const addArrow = (a, b) => a + b;
+
+    // 19 Prime check
+    function checkPrime() {
+      let n = Number(primeNum.value);
+      if (n <= 1) return primeResult.innerText = "Not Prime";
+
+      for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) return primeResult.innerText = "Not Prime";
+      }
+      primeResult.innerText = "Prime Number";
+    }
+
+    // 20 Reverse string
+    function reverseString() {
+      let text = reverseText.value;
+      let reversed = text.split("").reverse().join("");
+      reverseResult.innerText = reversed;
+    }
+
+    // 21 Output explanation
+    function test() {
+      return;
+      console.log("Hello");
+    }
+    test(); // Nothing prints because return exits function
+  </script>
+</body>
+</html>
